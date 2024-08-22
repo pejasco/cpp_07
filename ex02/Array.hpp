@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 15:10:17 by chuleung          #+#    #+#             */
-/*   Updated: 2024/08/21 22:03:56 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/08/22 10:49:00 by Scofield         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ class Array
 
         class IndexOutOfBoundsException : public std::exception
         {
-            const char* what() const throw()
-            {
-                return "Exception: Index out of Bounds";
-            }
+            public:
+                const char* what() const throw()
+                {
+                    return "Exception: Index out of Bounds";
+                }
         };
 
         unsigned int size() const;
@@ -116,32 +117,7 @@ unsigned int Array<T>::size() const
 template <typename T>
 void Array<T>::print(T& type)
 {
-    std::cout < type < "\n";
+    std::cout << type << "\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif
